@@ -69,22 +69,22 @@ const WeatherDisplay: React.FC<WeatherProps> = ({ lat, lon }) => {
 
 
     return (
-        <div>
+        <div className='mx-auto md:mx-0 md:ml-4'>
             <div className="flex items-center justify-end space-x-2 px-4 pb-2" >
                 <span className="text-neutral-900 dark:text-gray-50">Celsius</span>
                 <Switch checked={fahrenheit} onCheckedChange={handleFahrenheit} id="temperature-unit" aria-label="Toggle temperature unit" />
                 <span className="text-neutral-900 dark:text-gray-50">Fahrenheit</span>
             </div>
-            <div className=" p-4 bg-gradient-to-r from-teal-100 to-emerald-50 rounded-2xl w-[400px] shadow-lg flex flex-col ">
-                <h2 className="text-3xl font-bold text-center ">{weather.name + ","}<span className=' font-light text-gray-800 ml-2'>{sys?.country}</span></h2>
+            <div className="  p-4 bg-gradient-to-r from-teal-100 to-emerald-50 rounded-2xl w-[380px] sm:w-[400px] md:w-[400px] lg:w-[450px] shadow-lg flex flex-col ">
+                <h2 className="text-2xl md:text-3xl font-bold text-center ">{weather.name + ","}<span className=' font-light text-gray-800 ml-2'>{sys?.country}</span></h2>
                 <div className='flex gap-4 items-center justify-around'>
                     <div className='flex gap-2 justify-center items-center'>
                         <ThermometerIcon className="h-8 w-8 text-red-500" />
-                        <p className='text-2xl font-semibold'>{(Math.round((fahrenheit ? main.temp * 9 / 5 + 32 : main.temp))).toFixed(2) + " °" + (fahrenheit ? "F" : "C")}</p>
+                        <p className='text-xl md:text-2xl font-semibold'>{(Math.round((fahrenheit ? main.temp * 9 / 5 + 32 : main.temp))).toFixed(2) + " °" + (fahrenheit ? "F" : "C")}</p>
                     </div>
                     <img className='h-[100px] w-[100px]' src={weatherIcon} alt={weatherDetails[0].description} />
                 </div>
-                <div className='flex gap-4 items-center justify-between text-lg px-4 '>
+                <div className='flex gap-4 items-center justify-between text-base md:text-lg px-4 '>
                     <div className='flex gap-2 justify-center items-center '>
                         <CloudIcon className="h-6 w-6 text-gray-500 " />
                         <p className='font-normal text-gray-700'>{weatherDetails[0].description}</p>
@@ -94,7 +94,7 @@ const WeatherDisplay: React.FC<WeatherProps> = ({ lat, lon }) => {
                         <p className='font-normal text-gray-700'>{main.humidity}%</p>
                     </div>
                 </div>
-                <div className='flex gap-4 items-center justify-between mt-2 text-lg px-4'>
+                <div className='flex gap-4 items-center justify-between mt-2 text-base md:text-lg px-4'>
                     <div className='flex gap-2 justify-center items-center'>
                         <WindIcon className="h-6 w-6 text-gray-500 " />
                         <p className='font-normal text-gray-700'>{wind.speed} m/s</p>

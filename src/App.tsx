@@ -56,7 +56,7 @@ const App: React.FC = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
-      className="h-screen mx-auto"
+      className="pb-8 md:pb-2 md:h-screen lg:h-auto mx-auto"
     >
       <header className="text-2xl gap-2 h-16 font-medium mb-4 w-full bg-gradient-to-r from-indigo-800 to-blue-800 text-white flex items-center justify-start pl-8">
         <img src={Logo} alt="Icon" className="h-10" />
@@ -66,10 +66,10 @@ const App: React.FC = () => {
       </header>
       <form
         onSubmit={handleFormSubmit}
-        className="mb-4 gap-4 flex flex-col md:flex-row items-center justify-center px-4 md:px-0"
+        className="mb-8 md:mb-4 gap-2 lg:gap-4 flex flex-col md:flex-row items-center justify-center px-4 mx-auto"
       >
         {/* Latitude Input */}
-        <label className="block mb-2 md:mb-0 text-lg font-semibold">
+        <label className="lg:block text-base text-center lg:text-lg font-semibold">
           Latitude
           <input
             name="latitude"
@@ -83,7 +83,7 @@ const App: React.FC = () => {
           />
         </label>
         {/* Longitude Input */}
-        <label className="block mb-2 md:mb-0 text-lg font-semibold">
+        <label className="lg:block text-base text-center lg:text-lg font-semibold">
           Longitude
           <input
             name="longitude"
@@ -97,20 +97,20 @@ const App: React.FC = () => {
           />
         </label>
         {/* Location input search */}
-        <div className="flex flex-col md:flex-row items-center justify-center md:inline-flex">
-          <p className="block text-lg mb-2 md:mb-0 font-semibold">Location</p>
-          <div className="ml-0 md:ml-4 p-1 text-center text-sm w-full md:w-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center">
+          <p className="text-base text-center lg:text-lg font-semibold">Location</p>
+          <div className="ml-0 md:ml-4 p-1 text-center text-sm w-full">
             <LocationSearchInput onLocationSelect={handleLocationSelect} />
           </div>
         </div>
         <button
           type="submit"
-          className="mt-2 md:mt-0 ml-0 md:ml-5 mb-2 p-2 px-4 ring-4 ring-emerald-500 ring-offset-2 font-light hover:text-white hover:font-semibold text-white hover:bg-neutral-700 bg-neutral-800 transition-all rounded-lg"
+          className="w-40 mt-4 md:mt-6 lg:mt-0 ml-0 md:ml-4 mb-2 p-2 px-4 ring-4 ring-emerald-500 ring-offset-2 font-light hover:text-white hover:font-semibold text-white hover:bg-neutral-700 bg-neutral-800 transition-all rounded-lg text-base"
         >
           Get Weather
         </button>
       </form>
-      <div className="flex flex-col md:flex-row items-end justify-center gap-4 relative z-0 mt-2 px-4 md:px-0">
+      <div className="flex flex-col md:flex-row items-end justify-center gap-4  z-0 mt-2 px-4 md:px-0 mx-auto">
         {/* Weather display */}
         <WeatherDisplay lat={lat} lon={lon} />
         {/* Map display */}

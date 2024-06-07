@@ -28,22 +28,26 @@ export default function RecentSearches({ lat, lon, onLocationSelect }: { lat: nu
                 </div>
             </div>
             <div className="mt-4 ">
-                <Carousel opts={{ align: "start" }} className="w-full  mx-auto">
+                <Carousel opts={{ align: "start" }} className="w-full mx-auto max-w-[300px] sm:max-w-[500px] md:max-w-[750px] lg:max-w-[1000px]">
                     <CarouselContent>
                         {recentSearches.map((location, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4" >
+                            <CarouselItem key={index} className=" basis-1/2 md:basis-1/3 lg:basis-1/4" >
                                 <Card className="bg-sky-100 border-none text-center cursor-pointer hover:opacity-60 transition" onClick={() => handlePrevLocationClick(location)}>
                                     <CardContent className="flex h-32 items-center justify-center p-4">
-                                        <span className="text-2xl font-medium">{location.name}</span>
+                                        <span className="text-lg sm:text-xl md:text-2xl font-medium">{location.name}</span>
                                     </CardContent>
                                 </Card>
                             </CarouselItem>
                         ))}
+
                     </CarouselContent>
+
                     <CarouselPrevious />
                     <CarouselNext />
+
+
                 </Carousel>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }

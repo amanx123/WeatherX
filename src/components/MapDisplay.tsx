@@ -35,7 +35,7 @@ const MapDisplay: React.FC<MapProps> = ({ lat, lon, zoom, onMapClick }) => {
     }, [lat, lon]);
 
     return (
-        <MapContainer center={position} zoom={zoom} className="h-[350px] w-[600px] rounded-xl" scrollWheelZoom>
+        <MapContainer center={position} zoom={zoom} className="h-[250px] w-[380px] sm:h-[300px] sm:w-[500px] mx-auto md:mx-0 md:h-[300px] md:w-[450px] lg:h-[400px] lg:w-[600px] rounded-xl md:mr-4 " scrollWheelZoom>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />

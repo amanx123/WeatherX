@@ -34,7 +34,7 @@ const LocationSearchInput: React.FC<LocationSearchInputProps> = ({ onLocationSel
                 value={query}
                 onChange={handleSearch}
                 placeholder="Search Places..."
-                className="p-2 px-4 border border-black bg-neutral-100 rounded-md mb-2 w-full outline-none placeholder:font-light"
+                className="ml-0 border border-black rounded-md p-2 bg-neutral-100 text-sm font-normal outline-none w-full md:w-auto"
             />
             {suggestions.length > 0 && (
                 <div className="absolute z-50 w-full bg-white border border-neutral-300 rounded">

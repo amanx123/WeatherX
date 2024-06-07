@@ -199,3 +199,4 @@ WeatherDisplay.propTypes = {
 };
 
 export default WeatherDisplay;
+

@@ -56,7 +56,7 @@ const App: React.FC = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
-      className="pb-8 md:h-[100vh] lg:h-[110vh] mx-auto "
+      className="pb-8 md:h-[100vh] lg:h-[110vh] mx-auto relative "
     >
       <header className="text-2xl gap-2 h-16 font-medium mb-4 w-full bg-gradient-to-r from-indigo-800 to-blue-800 text-white flex items-center justify-start pl-8">
         <img src={Logo} alt="Icon" className="h-10" />
@@ -110,7 +110,7 @@ const App: React.FC = () => {
           Get Weather
         </button>
       </form>
-      <div className="max-w-[1200px] flex flex-col md:flex-row items-end justify-center gap-4  z-0 mt-2 px-4 md:px-0 mx-auto">
+      <div className="max-w-[1200px] flex flex-col md:flex-row items-end justify-center gap-4 z-0 mt-2 px-4 md:px-0 mx-auto">
         {/* Weather display */}
         <WeatherDisplay lat={lat} lon={lon} />
         {/* Map display */}

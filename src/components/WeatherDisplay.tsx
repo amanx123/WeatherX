@@ -32,11 +32,11 @@ const WeatherDisplay: React.FC<WeatherProps> = ({ lat, lon }) => {
 
     if (!weather) {
         return (
-            <div className=''>
+            <div className='flex flex-col mx-auto md:mx-2'>
                 <div className='flex items-end justify-end'>
                     <div className="min-h-[30px] w-[200px] bg-neutral-100 animate-pulse mb-3 m-2 rounded-lg"></div>
                 </div>
-                <div className="flex flex-col gap-4 rounded-2xl p-4 bg-neutral-100 w-[400px] min-h-[220px] items-center justify-center">
+                <div className="h-[210px] md:h-[220px] flex flex-col gap-4 rounded-2xl p-4 bg-neutral-100 w-[380px] sm:w-[400px] md:w-[400px] lg:w-[450px] items-center justify-center">
                     <div className="h-8 w-[300px] bg-neutral-300 animate-pulse rounded"></div>
                     <div className='flex gap-2 w-full px-2 justify-center items-center'>
                         <div className="h-10 w-[40%] bg-neutral-300 animate-pulse rounded"></div>

@@ -33,7 +33,7 @@ export default function RecentSearches({ lat, lon, onLocationSelect }: { lat: nu
                         {recentSearches.map((location, index) => (
                             <CarouselItem key={index} className=" basis-1/2 md:basis-1/3 lg:basis-1/4" >
                                 <Card className="bg-sky-100 border-none text-center cursor-pointer hover:opacity-60 transition" onClick={() => handlePrevLocationClick(location)}>
-                                    <CardContent className="flex h-32 items-center justify-center p-4">
+                                    <CardContent className="flex h-36 items-center justify-center p-4">
                                         <span className="text-lg sm:text-xl md:text-2xl font-medium">{location.name}</span>
                                     </CardContent>
                                 </Card>

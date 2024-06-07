@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import PropTypes from 'prop-types';
-
+import markerIconPng from "leaflet/dist/images/marker-icon.png"
+import { Icon } from 'leaflet'
 interface MapProps {
     lat: number;
     lon: number;
@@ -38,7 +39,7 @@ const MapDisplay: React.FC<MapProps> = ({ lat, lon, zoom, onMapClick }) => {
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={position} />
+            <Marker icon={new Icon({ iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41] })} position={position} />
             <MapEvents onMapClick={(lat, lon) => {
                 setPosition([lat, lon]);
                 onMapClick(lat, lon);

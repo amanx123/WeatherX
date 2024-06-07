@@ -56,7 +56,7 @@ const App: React.FC = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
-      className="pb-8 md:h-screen lg:h-auto mx-auto"
+      className="pb-8 md:h-screen lg:h-auto mx-auto "
     >
       <header className="text-2xl gap-2 h-16 font-medium mb-4 w-full bg-gradient-to-r from-indigo-800 to-blue-800 text-white flex items-center justify-start pl-8">
         <img src={Logo} alt="Icon" className="h-10" />
@@ -66,7 +66,7 @@ const App: React.FC = () => {
       </header>
       <form
         onSubmit={handleFormSubmit}
-        className="mb-8 md:mb-4 gap-2 lg:gap-4 flex flex-col md:flex-row items-center justify-center px-4 mx-auto"
+        className="max-w-[1200px] mb-8 md:mb-4 gap-2 lg:gap-4 flex flex-col md:flex-row items-center justify-center px-4 mx-auto"
       >
         {/* Latitude Input */}
         <label className="lg:block text-base text-center lg:text-lg font-semibold">
@@ -110,7 +110,7 @@ const App: React.FC = () => {
           Get Weather
         </button>
       </form>
-      <div className="flex flex-col md:flex-row items-end justify-center gap-4  z-0 mt-2 px-4 md:px-0 mx-auto">
+      <div className="max-w-[1200px] flex flex-col md:flex-row items-end justify-center gap-4  z-0 mt-2 px-4 md:px-0 mx-auto">
         {/* Weather display */}
         <WeatherDisplay lat={lat} lon={lon} />
         {/* Map display */}

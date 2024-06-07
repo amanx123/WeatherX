@@ -56,7 +56,7 @@ const App: React.FC = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
-      className="pb-8 md:h-[100vh] lg:h-[110vh] mx-auto relative "
+      className="pb-8 md:h-[100%] lg:h-[100%] mx-auto relative "
     >
       <header className="text-2xl gap-2 h-16 font-medium mb-4 w-full bg-gradient-to-r from-indigo-800 to-blue-800 text-white flex items-center justify-start pl-8">
         <img src={Logo} alt="Icon" className="h-10" />

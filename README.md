@@ -9,7 +9,7 @@ WeatherX is a weather application that provides current weather information base
 - [Built With](#built-with)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Running the Application](#running-the-application)
+
 
 ## About the Project
 

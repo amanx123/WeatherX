@@ -5,15 +5,11 @@ WeatherX is a weather application that provides current weather information base
 ## Table of Contents
 
 - [About the Project](#about-the-project)
-  - [Features](#features)
+- [Features](#features)
 - [Built With](#built-with)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ## About the Project
 
@@ -52,4 +48,4 @@ To set up the project locally, follow these steps:
    git clone https://github.com/amanx123/weatherx.git
    pnpm install
    pnpm run dev
-   ```sh
+   ```

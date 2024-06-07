@@ -19,6 +19,7 @@ export default function RecentSearches({ lat, lon, onLocationSelect }: { lat: nu
         onLocationSelect(location.coordinates[0], location.coordinates[1])
     }
     return (
+        (recentSearches.length > 0) &&
         <div className="max-w-[1200px] px-4 mx-auto mt-4">
             <div className="flex items-center justify-start mb-2">
                 <h1 className="text-xl font-bold mr-4">Recent Searches</h1>
